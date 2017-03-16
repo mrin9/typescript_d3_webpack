@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>webpack 2 demo</title>
+    
+    <!-- If we import scss files it will trigger the ExtractTextPlugin and sass-loader to generate a css file (refer webpack.config.js)  -->
+    <link rel="stylesheet" href="dist/all_style.css"> 
+  </head>
+  <body>
+    <script src="dist/app.bundle.js"></script> <!-- <== This is the output bundle of webpack  -->
+    <script src="dist/vendor.bundle.js"></script> <!-- <== This is the output bundle of webpack  -->
+
+    <div class="main-container">
+      <div id="app-alert" class="alert alert-app-level" style="display:none"></div>
+      <header class="header-6">
+            <div class="branding" style="font-family:GlacialIndifference; font-size:24px; line-height:60px">WORLD DATA</div>
+            <div class="header-nav">
+                <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+                <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+            </div>
+            <div class="header-actions">
+                <a href="javascript://" class="nav-link nav-icon">
+                    <clr-icon shape="cog"></clr-icon>
+                </a>
+            </div>
+        </header>
+        <nav class="subnav" id="dashboard_subnav">
+          <ul class="nav">
+              <li class="nav-item"> <a data-show="population" class="nav-link" href="#">Population</a></li>
+              <li class="nav-item"> <a data-show="geo"        class="nav-link" href="#">Geography</a></li>
+              <li class="nav-item"> <a data-show="data"       class="nav-link" href="#">Country Data</a></li>
+              <li class="nav-item"> <a data-show="languages"  class="nav-link" href="#">Languages</a></li>
+          </ul>
+        </nav>
+        <div class="content-container">
+            <div id="content" class="content-area"></div>
+            <div id="population"  class="content-area" style="display:none"> 
+                <div> 
+                    <h3>Population</h3>
+                    <div id="population_chart" chart-container  data-file="population"          data-fields="country,population" style="height:300px;"></div>
+
+                    <h3>Population Density</h3>
+                    <div id="population_density" chart-container data-file="population-density" data-fields="country,density" style="height:300px;"></div>
+
+                    <h3>Life Expectency</h3>
+                    <div id="life_expectency" chart-container data-file="life-expectancy" data-fields="country,expectancy" style="height:300px;"></div>
+
+                    <h3>Average Male Height</h3>
+                    <div id="male_height" chart-container data-file="avg-male-height" data-fields="country,height" style="height:300px;"></div>
+
+
+                </div>
+            </div>
+            <div id="geo" class="content-area" style="display:none">
+                <div> 
+                    <h3>Surface Area</h3>
+                    <div id="surface_area" chart-container data-file="surface-area" data-fields="country,area" style="height:300px;"></div>
+
+                    <h3>Coastline</h3>
+                    <div id="costline" chart-container data-file="costline" data-fields="country,costline" style="height:300px;"></div>
+
+                    <h3>Average Temperature</h3>
+                    <div id="avg_temp" chart-container data-file="yearly-average-temperature" data-fields="country,temperature" style="height:300px;"></div>
+
+                </div>
+
+            </div>
+            <div id="data" class="content-area" style="display:none">
+                <div> 
+                    <h3>Country Data</h3>
+                    <div id="country_data" chart-container data-file="data"></div>
+                </div>
+
+            </div>
+            <div id="languages" class="content-area" style="display:none"> 
+                <div> 
+                    <h3>Languages</h3>
+                    <div id="language_data" chart-container data-file="lang"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  </body>
+</html>

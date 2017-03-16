@@ -1,0 +1,26 @@
+//To Trigger font-loading try to reference them in scss/css files
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('../fonts/GlacialIndifference-Regular.woff') format("woff"); // path will get replaced by webpacks file-loader based on where the file is generated
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('../fonts/GlacialIndifference-Regular.woff') format("woff"); // path will get replaced by webpacks file-loader based on where the file is generated
+    font-weight: bold;
+}
+
+.my_panel{
+    .my_heading{
+        font-size:16px
+    }
+    display:flex;
+    flex-direction: column;
+    font-size:13px;
+    color: $fg-color;
+    background-color:$bg-color; 
+    margin:0;
+    padding:16px;
+    border:1px solid #777;
+    border-radius: 2px;
+}

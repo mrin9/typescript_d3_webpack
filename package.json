@@ -1,0 +1,38 @@
+{
+  "name": "webpack_typescript_d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "clarity-icons": "^0.8.10",
+    "clarity-ui": "^0.8.10",
+    "d3": "^4.7.2",
+    "jquery": "^3.1.1",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/d3": "^4.7.0",
+    "@types/jquery": "^2.0.41",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
